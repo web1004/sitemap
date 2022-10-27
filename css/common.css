@@ -1,0 +1,101 @@
+@charset "utf-8"; 
+
+/* 웹폰트 CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Noto Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+/* font-family: 'Nanum Myeongjo', serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Exo', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
+/* font-family: 'Bellota', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* font-family: 'Bebas Neue', cursive; */
+
+
+/* 아이콘폰트 CDN */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+/* <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />  */
+/* font-family: 'Material Icons Outlined'; */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> */
+/* font-family: fontawesome; */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css'); 
+/* <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"> */
+/* font-family: xeicon;  */
+
+
+*{  /* 전체선택자(모든 태그에 여백을 빼줌 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+html{
+  overflow-y:scroll;  /* 문서전체에 세로 스크롤바자국 항상 표시 */
+  overflow-x:hidden;  /* 문서전체에 가로 스크롤바자국 항상 숨김 */
+}
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/* 시멘틱태그를 지원하지 않는 브라우저에서 inline로 인식하기 때문에 block로 변경해줌 */
+article,aside,details,summary,figcaption,figure,
+footer,header,hgroup,main,nav,section{ 
+	display:block;  
+}
+
+li{list-style-type: none;}  /*목록에 점 없애기 */
+
+a{
+  text-decoration: none;   /*하이퍼링크 밑줄 없애기*/
+  color: inherit;  /*하이퍼링크의 글자색 부모한테 상속받기*/
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size:100%; /*제목 태그들에 글자크기를 초기화하여 앞으로 부여하는 크기의 기준을 똑같이 설정함*/
+	font-weight: normal;  /*기본굵기 제거*/
+	margin-top: 0;  /*기본마진 중 위쪽마진이 큰편이어서 제거*/
+}
+button,input{
+	outline: none;
+}
+button,
+input[type=button],
+input[type=submit],
+input[type=reset]{
+	cursor: pointer;
+}
+
+img{
+	vertical-align:top; /*이미지에 원치 않는 여백이 생성되는 브라우저 오류가 발생하는 경우가 있음*/
+	font-size:0;  /*폰트 크기 초기화*/
+	border:0; /* 이미지 링크시 기본적으로 나타나는 테두리 제거 */
+}
+
+table{border-collapse:collapse;}  /*표의 더블선 제거 */
+
+input, select{vertical-align:middle;}  /*문자와 나란히 입력박스를 배치하면 높낮이가 맞지않아 맞추기 위함 */
+
+.clear:after{    /* float문제해결 */
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.indent{   /* 글자 안보이게 밀어놓기 */
+	display:block;
+	text-indent:-9999px;
+}
