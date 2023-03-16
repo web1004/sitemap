@@ -20,20 +20,21 @@ $(document).ready(function(){
 
 
   chk2 =true;
-	$(".s2").click(function(){
-		$(".m2").stop().slideToggle();
-		$(this).parent().toggleClass("active")
+  $(".s2").click(function(){
 
-		if(chk2){
-			$(this).find("span").html("<i class='fa fa-chevron-down'></i>");
-			$(this).find("h3").css({"opacity":"0"})
-			chk2=false;
-		}else{
-			$(this).find("span").html("<i class='fa fa-chevron-up'></i>");
-			$(this).find("h3").css({"opacity":"1"})
+    $(".m2").stop().slideToggle();
+    $(this).toggleClass("active");
+
+    if(chk2){
+      $(this).find("span").html("<i class='fa fa-chevron-down'></i>");
+      $(this).find("h3").css({"opacity":"0"});
+      chk2=false;
+    }else{
+      $(this).find("span").html("<i class='fa fa-chevron-up'></i>");
+			$(this).find("h3").css({"opacity":"1"});
 			chk2=true;
-		};
+    }
 
-	});
+  });
 
 });

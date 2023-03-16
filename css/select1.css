@@ -1,6 +1,7 @@
 @import url(common.css);
 
 body{background:#dddcdb}
+*{box-sizing: border-box;}
 
 section{
 	width:1200px;
@@ -59,7 +60,7 @@ footer{
 /* 셀렉트버튼(화살표) 클릭시 바뀌는 부분(JQuery) */
 .active{
   background-color: #2a2a2a;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 .active .fa{
 	color: #fff;
