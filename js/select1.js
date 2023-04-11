@@ -12,12 +12,11 @@ $(document).ready(function(){
       chk1=false;
     }else{
       $(this).find("span").html("<i class='fa fa-chevron-up'></i>");
-			$(this).find("h3").css({"opacity":"1"});
-			chk1=true;
+      $(this).find("h3").css({"opacity":"1"});
+      chk1=true;
     }
 
   });
-
 
   chk2 =true;
   $(".s2").click(function(){
@@ -31,8 +30,8 @@ $(document).ready(function(){
       chk2=false;
     }else{
       $(this).find("span").html("<i class='fa fa-chevron-up'></i>");
-			$(this).find("h3").css({"opacity":"1"});
-			chk2=true;
+      $(this).find("h3").css({"opacity":"1"});
+      chk2=true;
     }
 
   });
