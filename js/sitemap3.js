@@ -4,5 +4,5 @@ $(document).ready(function(){
     $(this).toggleClass("active");
     $(".modal").slideToggle("fast");
   });
-
+  
 });

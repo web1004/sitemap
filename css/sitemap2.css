@@ -15,25 +15,17 @@ nav{
   justify-content: space-between;
   align-items: center;
 }
-.logo{
-	flex: 1;
-}
+.logo{flex: 1;}
 .gnb{
 	flex: 5;
 	display: flex;
 	justify-content: center;
 }
-.gnb li{
-	margin: 0 10px;
-}
-.allmenu{
-	flex: 1;
-}
+.gnb li{margin: 0 10px;}
+.allmenu{flex: 1;}
 
 /* Trigger */
-.allmenu{
-	flex: 1;
-}
+.allmenu{flex: 1;}
 .trigger {
   /* border: 1px solid red; */
 	position: relative;
@@ -54,17 +46,9 @@ nav{
 .trigger span:nth-child(3){top: 100%;}
 
 /* jQuery 에서 trigger클릭시 바뀌는 부분 */
-.trigger.active span:nth-child(1){
-  top: 50%;
-  transform: rotate(45deg);
-}
-.trigger.active span:nth-child(2){
-  opacity: 0;
-}
-.trigger.active span:nth-child(3){
-  top: 50%;
-  transform: rotate(-45deg);
-}
+.trigger.active span:nth-child(1){top: 50%;transform: rotate(45deg);}
+.trigger.active span:nth-child(2){opacity: 0;}
+.trigger.active span:nth-child(3){top: 50%;transform: rotate(-45deg);}
 
 
 /* Sitemap */

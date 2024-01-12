@@ -2,7 +2,6 @@ $(document).ready(function(){
 
   chk1 =true;
   $(".s1").click(function(){
-
     $(".m1").stop().slideToggle();
     $(this).toggleClass("active");
 
@@ -15,12 +14,10 @@ $(document).ready(function(){
       $(this).find("h3").css({"opacity":"1"});
       chk1=true;
     }
-
   });
 
   chk2 =true;
   $(".s2").click(function(){
-
     $(".m2").stop().slideToggle();
     $(this).toggleClass("active");
 
@@ -33,7 +30,6 @@ $(document).ready(function(){
       $(this).find("h3").css({"opacity":"1"});
       chk2=true;
     }
-
   });
 
 });
