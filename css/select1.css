@@ -1,113 +1,93 @@
 @import url(common.css);
 
-body{background:#dddcdb}
-*{box-sizing: border-box;}
-
-section{
-	width:1200px;
-	height:500px;
-	background:skyblue;
-	margin:0 auto;
+* {box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
 }
 
-footer{
-  width: 1200px;
-	height: 70px;
-	margin: auto;
-	background-color: #fff;
-	display: flex;
+
+/* Header & Section */
+header, section {
+  text-align: center;
+  font-size: 42px;
+  text-transform: uppercase;
+}
+header{
+  height: 100px;
+  line-height: 100px;
+  background-color: #eee;
+}
+section {
+  height: calc(100vh - 250px);  /* 전체뷰높이-(헤더높이+푸터높이) */
+  line-height: 500px;
 }
 
-.foot_left{
-	flex: 1;
-	position: relative;
-}
-.select{
-  height: 70px;
+/* Footer */
+footer {
+  background-color: #37393d;
+  color: #fff;
+  height: 150px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-	align-items: center;
-	cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
 }
-.select h3{
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	color: #666;
+.copyright {flex: 8;}
+.family {flex: 2}
+.foot-util a {color: yellowgreen;}
+.foot-util a:hover {text-decoration: underline;}
+.foot-util a:last-child {color: #fff;}
+address {
+  color: #999;
+  font-style: normal;
 }
-.fa{
-	color: #666;
-	margin-bottom: 5px;
-}
-
-.foot_center{
-	flex: 5;
-  border: solid #ccc;
-	border-width: 0 1px;
-}
-.foot_center P{
-	height: 70px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+address .bar {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #555;
+  margin: 0 10px;
 }
 
-.foot_right{
-	flex: 1;
-	position: relative;
+/* Family Site */
+.dropdown {
+  width: 200px;
+  position: relative;
+  background-color: #303135;
+  padding: 5px;
+  border: 1px solid #555;
+  cursor: pointer;
+  float: right;
 }
-
-/* 셀렉트버튼(화살표) 클릭시 바뀌는 부분(JQuery) */
-.active{
-  background-color: #2a2a2a;
-	padding-top: 20px;
+.sub-navi {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  line-height: 30px;
+  width: 100%;
+  background-color: #58595b;
+  border: 1px solid#999;
+  border-bottom: none;
 }
-.active .fa{
-	color: #fff;
+.sub-navi li {
+  padding: 1px 10px;
+  border-bottom: 1px solid #777;
 }
-
-
-/* 셀렉트 박스---------------- */
-.menu{  
-	display:none;
-	position:absolute;
-	bottom:100%;
-	background:#2a2a2a;
-	width:100%;
+.sub-navi li:hover {background-color: #333;}
+.sub-navi li a {color: #ccc;}
+.title:after {
+  content:"\f107";
+  font-family: fontawesome;
+  position: absolute;
+  top: 0;
+  right:0;
+  color: #ccc;
+  width: 30px;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
 }
-.menu>ul>li{
-	/* padding-left: 10px; */
-	text-indent: 10px;
-}
-.menu ul li span{   
-	display:block;
-	margin:10px 0;
-	color:#fff;
-	font-size:14px;
-	font-weight:400;
-}
-.smenu li:last-child{
-	padding-bottom: 5px;
-	border-bottom:solid 1px #535252;
-}
-.smenu li a{
-	display:block;
-	font-size: 13px;
-	color:#969696;
-	padding:3px 0;
-}
-.smenu li a:after{
-	content: '\e5cc';
-	font-family: 'Material Icons Outlined';
-	float:right;
-	margin: 3px 10px 0 0;
-	opacity: 0;
-	transition: 0.35s;
-}
-.smenu li a:hover{
-	color:#fda601;
-	background-color: #000;
-}
-.smenu li a:hover:after{
-	opacity: 1;
-}
+.title.active:after {transform: rotateX(180deg);}

@@ -1,107 +1,113 @@
 @import url(common.css);
 
-body{background:#efefef;}
-
-#wrap{width:100%}
+body{background:#dddcdb}
+*{box-sizing: border-box;}
 
 section{
 	width:1200px;
 	height:500px;
 	background:skyblue;
-	margin:auto;
+	margin:0 auto;
 }
-
-
-/*Footer----------------------------------*/
 
 footer{
-	width:100%;
-	border-top:solid 2px #334555;
-	background-color:#fff;
-	margin-top:50px;
-	padding-bottom:10px;
-}
-footer .footer1{
-	width:100%;
-	height:50px;
-	border-bottom:solid 1px #e9e9e9;
-}
-.footer1_in{
-	width:1200px;
-	margin:auto;
+  width: 1200px;
+	height: 70px;
+	margin: auto;
+	background-color: #fff;
 	display: flex;
 }
-.footmenu1, .footmenu2{flex: 1;}
 
-
-.select{ 
-	font-size:14px;
-	font-weight:400;
-	line-height:50px;
-	padding-left:20px;
-	border-left:solid 1px #e9e9e9;
+.foot_left{
+	flex: 1;
+	position: relative;
 }
-.footer1_in>div:nth-of-type(2){
-	border-right:solid 1px #e9e9e9;
-}
-
-.select:after{
-	content: "\e946";
-	font-family: xeicon;
-	font-size: 20px;
-	float: right;
-	width: 50px;
-	border-left:solid 1px #e9e9e9;
-	text-align: center;
+.select{
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	align-items: center;
 	cursor: pointer;
 }
-.active:after{
-	content: "\e943";
-	font-family: xeicon;
-	font-size: 20px;
-	float: right;
-	width: 50px;
-	border-left:solid 1px #e9e9e9;
-	text-align: center;
+.select h3{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: #666;
+}
+.fa{
+	color: #666;
+	margin-bottom: 5px;
 }
 
-.footmenu1{position:relative;}
-.footmenu1 .fbox1{  
+.foot_center{
+	flex: 5;
+  border: solid #ccc;
+	border-width: 0 1px;
+}
+.foot_center P{
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.foot_right{
+	flex: 1;
+	position: relative;
+}
+
+/* 셀렉트버튼(화살표) 클릭시 바뀌는 부분(JQuery) */
+.active{
+  background-color: #2a2a2a;
+	padding-top: 20px;
+}
+.active .fa{
+	color: #fff;
+}
+
+
+/* 셀렉트 박스---------------- */
+.menu{  
 	display:none;
 	position:absolute;
-	bottom:103%;  /*보통 100%를 사용해서 끝나는 지점에 맞추지만 가로라인이 겹쳐서 깔끔하게 하기 위해 조정함.*/
-	left:0;
-	width:600px;
-	border:1px solid #334555;
-	padding:30px;
-	padding-left:20px;
-	padding-right:10px;
-	background-color:#fff;
+	bottom:100%;
+	background:#2a2a2a;
+	width:100%;
 }
-.footmenu1 .fbox1>ul{
-	display: flex;
-	justify-content: space-between;
+.menu>ul>li{
+	/* padding-left: 10px; */
+	text-indent: 10px;
 }
-.footmenu1 .fbox1>ul>li{
-	flex: 1;
-	margin-left:15px;
-	padding-right:20px;
-	border-right:solid 1px #e9e9e9;
+.menu ul li span{   
+	display:block;
+	margin:10px 0;
+	color:#fff;
 	font-size:14px;
-	font-weight:600;
+	font-weight:400;
 }
-.footmenu1 .fbox1>ul>li:last-child{border-right: none;}
-.footmenu1 .fbox1>ul>li>ul{margin-top:10px;}
-.footmenu1 .fbox1>ul>li>ul>li{margin-bottom:5px;}
-
-.footmenu1 .fbox1>ul>li>ul>li>a{
-	color:#666;
-	font-size:13px;
-	font-weight:normal;
+.smenu li:last-child{
+	padding-bottom: 5px;
+	border-bottom:solid 1px #535252;
 }
-
-footer .footer2{
-	width:1200px;
-	margin:25px auto;
-	background : #fff;
+.smenu li a{
+	display:block;
+	font-size: 13px;
+	color:#969696;
+	padding:3px 0;
+}
+.smenu li a:after{
+	content: '\e5cc';
+	font-family: 'Material Icons Outlined';
+	float:right;
+	margin: 3px 10px 0 0;
+	opacity: 0;
+	transition: 0.35s;
+}
+.smenu li a:hover{
+	color:#fda601;
+	background-color: #000;
+}
+.smenu li a:hover:after{
+	opacity: 1;
 }
