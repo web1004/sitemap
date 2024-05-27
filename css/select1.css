@@ -1,12 +1,10 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
-* {box-sizing: border-box; }
 body {
-  font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
   font-size: 15px;
 }
-
 
 /* Header & Section */
 header, section {

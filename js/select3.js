@@ -4,5 +4,5 @@ $(document).ready(function(){
     $(this).toggleClass("active");
     $(".footmenu1 .fbox1").stop().slideToggle();
   });
-
+  
 });

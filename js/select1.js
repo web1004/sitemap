@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-  $('.title').click(function(){
-    $(this).toggleClass('active');
-    $('.sub-navi').slideToggle(200);
+  $(".title").click(function(){
+    $(this).toggleClass("active");
+    $(".sub-navi").slideToggle(200);
   });
 
 });

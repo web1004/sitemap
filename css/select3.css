@@ -1,4 +1,5 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
 body{background:#efefef;}
 

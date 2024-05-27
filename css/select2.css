@@ -1,7 +1,7 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
 body{background:#dddcdb}
-*{box-sizing: border-box;}
 
 section{
 	width:1200px;
