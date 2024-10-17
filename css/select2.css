@@ -58,14 +58,14 @@ footer{
 }
 
 /* 셀렉트버튼(화살표) 클릭시 바뀌는 부분(JQuery) */
+/* 왼쪽과 오른쪽 메뉴에 공통으로 사용하기 위해 앞에 선택자명을 붙이지 않음*/
 .active{
   background-color: #2a2a2a;
-	padding-top: 20px;
+	padding-top: 25px;
+	transition: 0.35s;
 }
-.active .fa{
-	color: #fff;
-}
-
+.active .fa{color: #fff;}
+.active h3{opacity: 0;}
 
 /* 셀렉트 박스---------------- */
 .menu{  
@@ -98,7 +98,7 @@ footer{
 }
 .smenu li a:after{
 	content: '\e5cc';
-	font-family: 'Material Icons Outlined';
+	font-family: 'Material Symbols Outlined';
 	float:right;
 	margin: 3px 10px 0 0;
 	opacity: 0;
